@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTC SafeSpace | Anti-Bullying & Violence Reporting System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"><img src="PTC.jpg" alt=""></div>
+        <div>
+          <strong>PTC SafeSpace</strong>
+          <small>Student Safety System</small>
+        </div>
+      </div>
+
+      <nav>
+        <a class="nav-link active" href="#dashboard" data-section="dashboard"><span>Dashboard</span></a>
+        <a class="nav-link" href="#report" data-section="report"> <span>Report an Incident</span></a>
+        <a class="nav-link" href="#reports" data-section="reports"> <span>My Reports</span></a>
+        <a class="nav-link" href="#notifications" data-section="notifications"> <span>Notifications</span>
+        <a class="nav-link" href="#safety" data-section="safety"> <span>Safety & Help</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="confidential">
+          <span></span>
+          <div><strong>Confidential</strong><small>Your reports are handled by authorized school personnel.</small></div>
+        </div>
+        <a class="nav-link" href="#logout" id="logout"> <span>Log out</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu"></button>
+        <div class="breadcrumb">Student Portal / <strong id="pageName">Dashboard</strong></div>
+        <div class="profile">
+          <div class="profile-text"><strong>DreamTeam</strong><small>Student</small></div>
+        </div>
+      </header>
+
+      <section class="content">
+        <!-- DASHBOARD -->
+        <div class="page active" id="dashboard">
+          <div class="hero">
+            <div>
+              <span class="eyebrow">PATEROS TECHNOLOGICAL COLLEGE</span>
+              <h1>Welcome, DreamTeam! </h1>
+              <p>Your voice matters. Together, we can help keep our school safe, respectful, and inclusive.</p>
+            </div>
+            <button class="primary-btn" data-go="report"> Report an Incident</button>
+          </div>
+
+          <div class="notice">
+            <span class="notice-icon"></span>
+            <div><strong>Your privacy matters</strong><p>Reports are confidential and can be submitted anonymously. Only authorized personnel can access case information.</p></div>
+            <button class="close-notice" aria-label="Close">×</button>
+          </div>
+
+          <div class="section-title"><div><h2>Overview</h2><p>Your reporting activity at a glance.</p></div></div>
+          <div class="stats">
+            <div class="stat-card"><div class="stat-icon blue">▤</div><div><span>Total Reports</span><strong>3</strong><small>All submitted reports</small></div></div>
+            <div class="stat-card"><div class="stat-icon amber">◷</div><div><span>Under Review</span><strong>1</strong><small>Awaiting assessment</small></div></div>
+            <div class="stat-card"><div class="stat-icon purple">⌕</div><div><span>Investigating</span><strong>1</strong><small>Currently being handled</small></div></div>
+            <div class="stat-card"><div class="stat-icon green">✓</div><div><span>Resolved</span><strong>1</strong><small>Cases completed</small></div></div>
+          </div>
+
+          <div class="grid-two">
+            <div class="panel">
+              <div class="panel-head"><div><h2>Recent Reports</h2><p>Your latest submitted incidents</p></div><a href="#reports" data-go="reports">View all →</a></div>
+              <div class="report-row"><div class="report-id">#PTC-2026-003</div><div><strong>Verbal Harassment</strong><small>Sept 10, 2026 • Classroom Building</small></div><span class="status amber-bg">Under Review</span></div>
+              <div class="report-row"><div class="report-id">#PTC-2026-002</div><div><strong>Cyberbullying</strong><small>Sept 06, 2026 • Online</small></div><span class="status blue-bg">Investigating</span></div>
+              <div class="report-row"><div class="report-id">#PTC-2026-001</div><div><strong>Bullying</strong><small>Aug 28, 2026 • Student Lounge</small></div><span class="status green-bg">Resolved</span></div>
+            </div>
+
+            <div class="panel help-panel">
+              <div class="panel-head"><div><h2>Need Help?</h2><p>You don't have to face it alone.</p></div></div>
+              <div class="help-item"><span></span><div><strong>Guidance Office</strong><small>Talk to a trusted counselor about what you're experiencing.</small></div></div>
+              <div class="help-item"><span></span><div><strong>Emergency Assistance</strong><small>If there is immediate danger, contact campus security or emergency services.</small></div></div>
+              <a class="secondary-btn" href="#safety" data-go="safety">View Safety Resources</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- REPORT -->
+        <div class="page" id="report">
+          <div class="page-heading"><span class="eyebrow">SAFE REPORTING</span><h1>Report an Incident</h1><p>Tell us what happened. You can report an incident involving yourself or someone else.</p></div>
+          <form id="reportForm" class="form-card">
+            <div class="form-section">
+              <h2>1. Incident Information</h2><p>Provide as much detail as you feel comfortable sharing.</p>
+              <div class="form-grid">
+                <label>Type of incident <select required><option value="">Select incident type</option><option>Bullying</option><option>Physical Violence</option><option>Verbal Harassment</option><option>Cyberbullying</option><option>Threat / Intimidation</option><option>Sexual Harassment</option><option>Other</option></select></label>
+                <label>Date of incident <input type="date" required></label>
+                <label>Approximate time <input type="time"></label>
+                <label>Location <input type="text" placeholder="e.g., Classroom 204, Library"></label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h2>2. What happened?</h2>
+              <label>Describe the incident <textarea required rows="6" placeholder="Please describe what happened, including relevant details such as what was said or done..."></textarea></label>
+              <div class="char-count">0 / 1000 characters</div>
+            </div>
+
+            <div class="form-section">
+              <h2>3. People Involved</h2>
+              <div class="form-grid">
+                <label>Person(s) involved <input type="text" placeholder="Name, if known"></label>
+                <label>Witnesses <input type="text" placeholder="Name(s), if known"></label>
+              </div>
+              <p class="hint">If you don't know a name, describe the person (e.g., section, year level, or appearance).</p>
+            </div>
+
+            <div class="form-section">
+              <h2>4. Evidence <span class="optional">Optional</span></h2>
+              <div class="upload-box"><input id="evidence" type="file" multiple hidden><label for="evidence"><span class="upload-icon">↑</span><strong>Upload evidence</strong><small>Photos, screenshots, or documents • Max 10MB each</small><span class="secondary-btn">Choose Files</span></label><div id="fileList"></div></div>
+            </div>
+
+            <div class="form-section">
+              <h2>5. Privacy & Urgency</h2>
+              <div class="privacy-options">
+                <label class="check-card"><input type="checkbox" id="anonymous"><span><strong>Submit anonymously</strong><small>Your identity will not be shown to the person(s) involved.</small></span></label>
+                <label class="check-card urgent"><input type="checkbox" id="urgent"><span><strong>This is an urgent / immediate safety concern</strong><small>Use this only if someone may be in immediate danger.</small></span></label>
+              </div>
+            </div>
+
+            <div class="form-footer"><span> Your information will be treated confidentially.</span><button class="primary-btn" type="submit">Submit Report →</button></div>
+          </form>
+        </div>
+
+        <!-- REPORTS -->
+        <div class="page" id="reports">
+          <div class="page-heading"><span class="eyebrow">MY ACTIVITY</span><h1>My Reports</h1><p>Track the status and updates of your submitted reports.</p></div>
+          <div class="filter-bar"><input id="searchReports" type="search" placeholder="⌕  Search reports..."><select id="statusFilter"><option>All Status</option><option>Under Review</option><option>Investigating</option><option>Resolved</option></select><button class="primary-btn" data-go="report">+ New Report</button></div>
+          <div class="panel table-panel">
+            <table><thead><tr><th>Report ID</th><th>Incident</th><th>Date</th><th>Location</th><th>Status</th><th></th></tr></thead>
+              <tbody id="reportTable">
+                <tr data-status="Under Review"><td>#PTC-2026-003</td><td><strong>Verbal Harassment</strong></td><td>Sept 10, 2026</td><td>Classroom Building</td><td><span class="status amber-bg">Under Review</span></td><td><button class="view-btn">View</button></td></tr>
+                <tr data-status="Investigating"><td>#PTC-2026-002</td><td><strong>Cyberbullying</strong></td><td>Sept 06, 2026</td><td>Online</td><td><span class="status blue-bg">Investigating</span></td><td><button class="view-btn">View</button></td></tr>
+                <tr data-status="Resolved"><td>#PTC-2026-001</td><td><strong>Bullying</strong></td><td>Aug 28, 2026</td><td>Student Lounge</td><td><span class="status green-bg">Resolved</span></td><td><button class="view-btn">View</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="page" id="notifications">
+          <div class="page-heading"><span class="eyebrow">UPDATES</span><h1>Notifications</h1><p>Important updates about your reports and school safety.</p></div>
+          <div class="notification-list">
+            <div class="notification-card unread"><span class="notif-icon blue">↗</span><div><strong>Your report #PTC-2026-003 is under review.</strong><p>Authorized school personnel have received your report and will assess the incident.</p><small>Today • 10:35 AM</small></div></div>
+            <div class="notification-card unread"><span class="notif-icon amber">!</span><div><strong>Follow-up information may be requested.</strong><p>Please check your portal for secure messages from the Guidance Office.</p><small>Yesterday • 3:20 PM</small></div></div>
+            <div class="notification-card"><span class="notif-icon green">✓</span><div><strong>Report #PTC-2026-001 has been resolved.</strong><p>The case has been closed by authorized personnel.</p><small>Sept 03, 2026 • 1:10 PM</small></div></div>
+          </div>
+        </div>
+
+        <!-- SAFETY -->
+        <div class="page" id="safety">
+          <div class="page-heading"><span class="eyebrow">SUPPORT</span><h1>Safety & Help</h1><p>Resources and reminders to help keep our community safe.</p></div>
+          <div class="safety-grid">
+            <div class="panel safety-card"><span class="large-icon"></span><h2>Guidance & Counseling</h2><p>Reach out to the school guidance office if you need someone to talk to, need support, or want help with a situation.</p><button class="secondary-btn">Contact Guidance Office</button></div>
+            <div class="panel safety-card"><span class="large-icon"></span><h2>Immediate Danger</h2><p>If you or another person is in immediate danger, seek help from campus security or appropriate emergency services immediately.</p><button class="danger-btn" id="emergencyBtn">Emergency Information</button></div>
+            <div class="panel safety-card"><span class="large-icon"></span><h2>Be an Upstander</h2><p>If you witness bullying or violence, don't ignore it. Report what you saw and safely support the person affected.</p><button class="secondary-btn" data-go="report">Make a Report</button></div>
+            <div class="panel safety-card"><span class="large-icon"></span><h2>Confidentiality</h2><p>Only authorized school personnel should access reports. Avoid sharing sensitive case details publicly or through unsecured channels.</p><button class="secondary-btn" data-go="reports">Check My Reports</button></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="successModal"><div class="modal-box"><button class="modal-close">×</button><div class="success-check">✓</div><h2>Report Submitted</h2><p>Your report has been securely submitted. Your report ID is <strong>#PTC-2026-004</strong>.</p><p class="small">Please save this ID for future reference.</p><button class="primary-btn modal-close-btn" data-go="reports">View My Reports</button></div></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
